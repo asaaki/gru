@@ -1,0 +1,2 @@
+defmodule Gru do
+end
