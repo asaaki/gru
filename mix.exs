@@ -12,7 +12,7 @@ defmodule Gru.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [ registered: [:minion],
+    [ registered: [:gru],
       mod: { Minion, [] } ]
   end
 
