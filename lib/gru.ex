@@ -14,7 +14,7 @@ defmodule Gru do
       #=> minion@raspberry.local says: #1 PREEMPT Sun Jul 21 17:39:58 CDT 2013
   """
   def all command do
-    all(command, function(Gru.print_output/2))
+    all(command, &Gru.print_output/2)
   end
 
   @doc """
@@ -36,7 +36,7 @@ defmodule Gru do
 
   @doc "Executes command on all nodes except yourself"
   def other command do
-    other command, function(Gru.print_output/2)
+    other command, &Gru.print_output/2
   end
 
   @doc "Executes command on all nodes except yourself and takes a function that gets back the output"
@@ -46,7 +46,7 @@ defmodule Gru do
 
   @doc "Executes command on all nodes except the given nodes"
   def except nodes, command do
-    except nodes, command, function(Gru.print_output/2)
+    except nodes, command, &Gru.print_output/2
   end
 
   @doc "Executes command on all nodes except the given nodes and takes a function that gets back the output"
