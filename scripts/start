@@ -1,0 +1,22 @@
+#!/usr/bin/sh
+NODENAME=$(sh -c "cat /dev/urandom | tr -dc 'a-f0-9' | fold -w 7 | head -n 1")
+COOKIE="gru"
+START_ELIXIR="elixir --name ${NODENAME} --cookie ${COOKIE} --no-halt -pa ebin -pa deps/minion/ebin --app gru"
+START_IEX="iex --name ${NODENAME} --cookie ${COOKIE} -S mix"
+
+mix do deps.get, compile
+
+case $1 in
+  server|standalone|s)
+    echo "RUN: ${START_ELIXIR}"
+    $START_ELIXIR
+    ;;
+  iex|shell|console|c)
+    echo "RUN: ${START_IEX}"
+    $START_IEX
+    ;;
+  *)
+    echo "RUN: ${START_IEX}"
+    $START_IEX
+    ;;
+esac
