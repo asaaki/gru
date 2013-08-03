@@ -6,7 +6,7 @@ defmodule Gru.Mixfile do
       version: "0.0.1",
       elixir: "~> 0.10.0",
       source_url: "https://github.com/BananaLtd/gru",
-      homepage_url: "https://github.com/BananaLtd/gru",
+      homepage_url: "http://bananaltd.github.io/gru/",
       deps: deps ]
   end
 
