@@ -1,3 +1,3 @@
-[ "ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "745f15b4659aca79a19ed28c719b9354ad916898", []},
-  "minion": {:git, "git://github.com/BananaLtd/minion.git", "8f4f3920ce83990c781ba4e0a60cc5b449236368", []},
+[ "ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "745f15b4659aca79a19ed28c719b9354ad916898", [{:ref, "745f15b4659aca79a19ed28c719b9354ad916898"}]},
+  "minion": {:git, "git://github.com/BananaLtd/minion.git", "7a20144cd3f7ad313414430e5808c6a848bc7cf8", []},
   "random": {:git, "git://github.com/mururu/elixir-random.git", "e6442fa2273eed85b3f56e5f1628544295ed8913", []} ]
